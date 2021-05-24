@@ -64,7 +64,7 @@
        flutterResult:(FlutterResult)result
     additionalButton:(NSString *)secondButton {
   UIAlertController *alert =
-      [UIAlertController alertControllerWithTitle:@""
+      [UIAlertController alertControllerWithTitle:nil
                                           message:message
                                    preferredStyle:UIAlertControllerStyleAlert];
 
@@ -122,7 +122,7 @@
   NSError *authError = nil;
   self.lastCallArgs = nil;
   self.lastResult = nil;
-  context.localizedFallbackTitle = @"";
+  context.localizedFallbackTitle = nil;
 
   if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
                            error:&authError]) {
@@ -146,7 +146,7 @@
   NSError *authError = nil;
   _lastCallArgs = nil;
   _lastResult = nil;
-  context.localizedFallbackTitle = @"";
+  context.localizedFallbackTitle = nil;
 
   if (@available(iOS 9.0, *)) {
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthentication error:&authError]) {
